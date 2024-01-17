@@ -6,16 +6,24 @@
     <title>VueJs Basics</title>
 </head>
 <body>
-    <div>
-        <h3>
-            Welcome
-        </h3>
+
+
+    <div id="app">
+        <h3> Welcome {{name}} </h3>
     </div>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        
+        const { createApp, ref } = Vue
+
+        createApp({
+            data(){
+                return {
+                    name: 'Anas'
+                }
+            }
+        }).mount("#app")
     </script>
 
 
