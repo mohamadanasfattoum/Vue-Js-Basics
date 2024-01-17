@@ -7,11 +7,10 @@
 </head>
 <body>
 
-
     <div id="app">
         <h3> Welcome {{name}} </h3>
+        <h4>{{ Welcome('anas') }}</h4>
     </div>
-
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
@@ -22,7 +21,13 @@
                 return {
                     name: 'Anas'
                 }
-            }
+            },
+
+            methods: {
+                Welcome (name){
+                    return 'My name is ' + name
+                }
+            },
         }).mount("#app")
     </script>
 </body>
