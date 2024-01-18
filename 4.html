@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs Basics</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" v-model="text">
+        <button v-on:click="myfunc">Click me</button>
+        <button @click="myfunc">Click me2</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+
+        createApp({
+            data(){
+                return {
+                    link: 'https://www.google.com/',
+                    text: 'Anas'
+                }
+            },
+            methods: {
+                myfunc (){
+                    console.log('test')
+                }
+            },
+
+        }).mount("#app")
+    </script>
+</body>
+</html>
